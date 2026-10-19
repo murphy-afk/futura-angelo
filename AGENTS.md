@@ -96,6 +96,8 @@ text between the tags. A log line is English. A JSON error key is English, its m
 - Commit messages are minimal. One short line, lowercase, no trailing period, no body, no
   sign off, no emoji. Name the change and stop. Examples: `add collection grid`, `fix contact
   form validation`, `remove prettier`.
+- Never mention the session in a commit message. No `session 1`, no `session 2`, no session
+  numbering of any kind. The commit describes the change only, sessions live in ROADMAP.md.
 - Before finishing any task, run the linter and the build. Do not leave a broken build.
 - When you change the database schema, update ROADMAP.md section 5 in the same change.
 - When you add a page, add its row to `pages_meta` in the same change.
