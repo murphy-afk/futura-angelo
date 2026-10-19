@@ -8,7 +8,7 @@ router.get('/health', async (req, res) => {
 
   try {
     database = await ping();
-  } catch (error) {
+  } catch {
     database = false;
   }
 

@@ -254,7 +254,7 @@ Result: real HTML content per URL for crawlers, and a normal React app for human
 | `product_occasions` | product_id, occasion_id | Many to many join table. |
 | `retailers` | id, name, city, address, region, phone, website, latitude, longitude, is_showroom | Powers the Dove si trova page. The shop itself is seeded as the first row. |
 | `leads` | id, type, name, email, phone, occasion, message, created_at, status | `type` is `privato` or `rivenditore`. Every contact form submission lands here. |
-| `pages_meta` | route, title, description, og_image, canonical | Per route SEO metadata, read by the HTML renderer in production. |
+| `pages_meta` | route, title, description, og_image, canonical | Per route SEO metadata, read by the HTML renderer in production. The route key `*` is the fallback document for unknown paths. |
 | `admin_users` | id, email, password_hash, created_at | For a minimal admin area in session 6. |
 
 The authoritative DDL is `db/sql/001_schema.sql`, run by hand in MySQL Workbench. The table above
@@ -354,7 +354,7 @@ spam target.
 - Deliverable: a content doc the whole team writes from.
 
 ### Session 1. Scaffold and database
-Status: in progress.
+Status: complete.
 
 - Create the client and server apps, ESLint, custom CSS setup with design tokens.
 - Write `db/sql/001_schema.sql`, the full schema, ready to paste into MySQL Workbench.
@@ -366,6 +366,8 @@ Status: in progress.
   install and run cleanly.
 
 ### Session 2. API
+Status: complete. Pending: run `db/sql/003_pages_meta_404.sql` in MySQL Workbench.
+
 - Build all public read endpoints with validation and 404 handling.
 - Build the leads endpoint with rate limiting, honeypot field and server side validation.
 - Add the per route HTML renderer reading `pages_meta`.

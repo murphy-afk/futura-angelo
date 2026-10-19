@@ -9,7 +9,7 @@
     "dev:server": "npm --prefix server run dev",
     "build": "npm --prefix client run build",
     "start": "npm --prefix server run start",
-    "lint": "npm --prefix client run lint",
+    "lint": "npm --prefix client run lint && npm --prefix server run lint",
     "install:all": "npm install && npm --prefix client install && npm --prefix server install"
   },
   "devDependencies": {

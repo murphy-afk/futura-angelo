@@ -16,11 +16,23 @@ function read(name, fallback) {
   return value === undefined || value === '' ? fallback : value;
 }
 
+// Trusting proxy headers lets the API see the real client IP, which the rate
+// limiter needs. It also lets a client forge X-Forwarded-For, so it stays off
+// unless a reverse proxy the operator controls sits in front of the app.
+function parseTrustProxy(raw) {
+  const value = String(raw).trim().toLowerCase();
+  if (value === '' || value === 'false' || value === '0') return false;
+  if (value === 'true' || value === '1') return true;
+  if (/^\d+$/.test(value)) return Number(value);
+  return value;
+}
+
 export const config = {
   env: process.env.NODE_ENV || 'development',
   port: Number(read('SERVER_PORT', '4000')),
   clientOrigin: read('CLIENT_ORIGIN', 'http://localhost:5173'),
   publicUrl: read('PUBLIC_URL', 'http://localhost:5173'),
+  trustProxy: parseTrustProxy(read('TRUST_PROXY', 'false')),
   clientDist: path.resolve(here, '..', '..', 'client', 'dist'),
   db: {
     host: read('DB_HOST', 'localhost'),
