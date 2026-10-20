@@ -374,6 +374,8 @@ Status: complete. Pending: run `db/sql/003_pages_meta_404.sql` in MySQL Workbenc
 - Deliverable: curl returns correct JSON and the HTML shell carries real meta tags.
 
 ### Session 3. UI build
+Status: complete. Pending: revisit and lock the palette once the session 0 photos arrive.
+
 - Design tokens, typography, base layout, header and footer.
 - Home, Chi siamo, Collezioni, collection detail, Occasioni, Dove si trova, Contatti, 404.
 - Custom CSS only, no component library, no CSS framework.
