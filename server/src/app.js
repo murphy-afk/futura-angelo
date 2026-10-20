@@ -7,6 +7,7 @@ import cors from 'cors';
 import { config } from './config.js';
 import { renderDocument } from './seo/document.js';
 import api from './routes/index.js';
+import seoFiles from './routes/seoFiles.js';
 
 // Anything with a file extension is an asset request. Those miss the static
 // handler and must fall through to the JSON 404 instead of an HTML document.
@@ -27,6 +28,7 @@ export function createApp() {
   app.use(express.json({ limit: '100kb' }));
 
   app.use('/api', api);
+  app.use(seoFiles);
 
   // In production Express serves the built React bundle. Every document route
   // is rendered from pages_meta, so the crawler receives a real title,
