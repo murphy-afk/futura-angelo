@@ -34,6 +34,7 @@ export const config = {
   publicUrl: read('PUBLIC_URL', 'http://localhost:5173'),
   trustProxy: parseTrustProxy(read('TRUST_PROXY', 'false')),
   clientDist: path.resolve(here, '..', '..', 'client', 'dist'),
+  ssrEntry: path.resolve(here, '..', '..', 'client', 'dist-ssr', 'entry-server.js'),
   db: {
     host: read('DB_HOST', 'localhost'),
     port: Number(read('DB_PORT', '3306')),

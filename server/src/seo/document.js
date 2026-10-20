@@ -5,12 +5,13 @@ import { findMetaForPath } from '../db/pagesMeta.js';
 import { getSettings } from '../db/settings.js';
 import { findCollectionBySlug } from '../db/collections.js';
 import { breadcrumbList, localBusiness, organization } from './jsonLd.js';
+import { renderRoute } from './ssr.js';
 
 // Per route HTML renderer. Express hands it a path, it reads title,
 // description, canonical and og image from pages_meta, adds JSON-LD built
-// from settings, and injects everything into the React build template.
-// The crawler therefore receives a real document, React hydrates the same
-// markup for the visitor.
+// from settings, and injects everything plus the rendered React body into the
+// build template. The crawler therefore receives the same document the visitor
+// sees, and React hydrates that markup instead of replacing it.
 
 const templatePath = path.resolve(config.clientDist, 'index.html');
 
@@ -99,6 +100,26 @@ function applyHead(template, head) {
   return template.replace('</head>', () => `${head}\n  </head>`);
 }
 
+// The rendered body goes inside the root element and the data the page was
+// rendered from goes into a global, so the first client render reads the same
+// values instead of refetching. A callback replacer keeps dollar sequences in
+// the markup and in the JSON out of the replacement string.
+
+function applyBody(template, markup, initialData) {
+  const dataJson = JSON.stringify(initialData)
+    .replace(/</g, '\\u003c')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
+
+  const withData = template.replace(
+    '</body>',
+    () => `    <script>window.__INITIAL_DATA__ = ${dataJson};</script>\n  </body>`
+  );
+
+  if (!markup) return withData;
+  return withData.replace('<div id="root"></div>', () => `<div id="root">${markup}</div>`);
+}
+
 async function buildBreadcrumbs(route) {
   if (route === '/') return null;
 
@@ -168,5 +189,12 @@ export async function renderDocument(pathname) {
     jsonLd,
   });
 
-  return { html: applyHead(loadTemplate(), head), status };
+  const rendered = await renderRoute(route);
+  const html = applyBody(
+    applyHead(loadTemplate(), head),
+    rendered ? rendered.markup : '',
+    rendered ? rendered.initialData : {}
+  );
+
+  return { html, status };
 }
