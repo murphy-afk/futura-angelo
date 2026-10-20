@@ -132,6 +132,8 @@ materials, not from the photos. Request these before session 3:
 - 10 to 20 high resolution photos of the showroom interior
 - Product shots per material: silver, glass, crystal, porcelain, Murano style, table clocks
 - The official logo in vector or PNG with transparent background
+- A favicon derived from the logo. Until it arrives the site ships an empty
+  `data:,` icon link so browsers stop requesting a missing `favicon.ico`.
 - Any old catalogue scans for typography cues
 - Permission to use the Google listing photos, or a fresh photo shoot
 
@@ -188,6 +190,8 @@ filled block. Large gold areas read as cheap and fight the products.
 ```
 futura-angelo/
   client/          React app, built with Vite
+    public/
+      photos/      Photographs from the owner, served from /photos
     src/
       components/
       pages/
@@ -326,7 +330,9 @@ spam target.
 
 ### 8.3 Technical
 
-- `sitemap.xml` generated from published collections, products and occasions.
+- `sitemap.xml` generated from published collections, products and occasions. Only URLs that
+  exist as pages are listed, so today that means the static routes plus the collection detail
+  routes: there is no product or occasion detail page yet.
 - `robots.txt` allowing all, pointing at the sitemap.
 - Descriptive slugs in Italian: `/collezioni/bomboniere-in-cristallo`.
 - Images in WebP with AVIF fallback, explicit width and height, lazy loading below the fold.
@@ -366,7 +372,7 @@ Status: complete.
   install and run cleanly.
 
 ### Session 2. API
-Status: complete. Pending: run `db/sql/003_pages_meta_404.sql` in MySQL Workbench.
+Status: complete. The `db/sql/003_pages_meta_404.sql` script has been run in MySQL Workbench and verified.
 
 - Build all public read endpoints with validation and 404 handling.
 - Build the leads endpoint with rate limiting, honeypot field and server side validation.
@@ -383,13 +389,38 @@ Status: complete. Pending: revisit and lock the palette once the session 0 photo
 - Deliverable: complete responsive site against seed data.
 
 ### Session 4. SEO and performance
-- Sitemap, robots, JSON-LD, per route titles and descriptions.
-- Image pipeline to WebP and AVIF, responsive sizes.
-- Lighthouse pass on every route, mobile and desktop.
-- Deliverable: scores recorded, structured data validated with the Rich Results test.
+Status: complete. Pending: the image pipeline to WebP and AVIF, the favicon, the product detail
+pages with their `Product` structured data, and the Rich Results validation, which needs the
+live domain. All of those wait on the session 0 assets or on session 5.
+
+- `sitemap.xml` generated from the published collections plus the static routes, `robots.txt`
+  allowing all and pointing at the sitemap. Only URLs that exist as pages are listed.
+- Per route titles, descriptions, canonicals and Open Graph tags come from `pages_meta` as
+  before, and a meta hook now keeps the head in step with client side navigation instead of
+  leaving the first loaded title behind.
+- Server side rendered body: Express renders the React tree with the data the page reads
+  prefetched from MySQL, so the crawler receives the same HTML as the visitor, exactly one H1
+  per page, and React hydrates that markup instead of rendering over it.
+- JSON-LD in place: LocalBusiness on home, Organization on Chi siamo, BreadcrumbList on inner
+  pages. Product structured data arrives with the product pages.
+- Lighthouse, headless Chrome against the production Express server on `localhost`:
+
+| Route | Mobile perf | Desktop perf | Accessibility | Best practices | SEO |
+| --- | --- | --- | --- | --- | --- |
+| Home | 99 | 99 | 100 | 100 | 100 |
+| Collezione Silver | 100 | 99 | 100 | 100 | 100 |
+| Chi siamo | 99 | 99 | 100 | 100 | 100 |
+| Dove si trova | 99 | 99 | 100 | 100 | 100 |
+| Contatti | 100 | 99 | 100 | 100 | 100 |
+
+- No failed audits on any route. Home on the mobile profile: LCP 1.6 s, CLS 0.03, total weight
+  157 KiB, against the targets in 8.3 of SEO 95 plus, performance 90 plus, LCP under 2.5 s.
+- Deliverable: scores recorded, structured data validated with the Rich Results test once the
+  domain is live.
 
 ### Session 5. Deploy and handover
 - Deploy Express serving the built client on a Node host.
+- Set `PUBLIC_URL` to the live domain before launch, canonical URLs and the sitemap are built from it.
 - MySQL managed instance, environment variables, backups.
 - Domain, SSL, DNS, Google Search Console, Google Business Profile link.
 - Deliverable: live site, access credentials handed over, training notes.
