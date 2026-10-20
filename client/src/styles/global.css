@@ -63,8 +63,9 @@ img {
   padding: 0 var(--space-4);
 }
 
-.page {
-  padding: var(--space-6) 0;
+:focus-visible {
+  outline: 2px solid var(--color-accent-deep);
+  outline-offset: 2px;
 }
 
 .eyebrow {
@@ -87,9 +88,5 @@ img {
 
   h2 {
     font-size: var(--size-lg);
-  }
-
-  .page {
-    padding: var(--space-5) 0;
   }
 }

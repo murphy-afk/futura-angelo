@@ -5,6 +5,9 @@
   --color-muted: #6e675e;
   --color-accent: #b08d57;
   --color-accent-deep: #8c6d3f;
+  --color-accent-tint: #f6efe3;
+  --color-error: #8f2f27;
+  --color-error-tint: #f7ebe9;
   --color-line: #e6e0d6;
 
   --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
