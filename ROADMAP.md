@@ -32,10 +32,8 @@ Confirm the flagged items with the owner before launch.
 | --- | --- | --- |
 | Display name | Futura | High |
 | Legal name | Futura di Lacalamita Angelo | High |
-| Address on Google Maps | Via Novara 34, 20147 Milano | Needs confirmation |
-| Address on old site | Via Novara 139, 20153 Milano | Needs confirmation |
-| Address on other directories | Via Novara 105, 20153 Milano | Needs confirmation |
-| Map coordinates | 45.4730713, 9.1184392 | High |
+| Address, confirmed by owner | Via Novara 105, 20153 Milano MI | High, confirmed |
+| Map coordinates | 45.4730713, 9.1184392, matches Via Novara 105 | High |
 | Landline | +39 02 4820 2585 r.a. | High |
 | Fax | +39 02 4820 2805 | High |
 | Mobile | +39 349 237 6450 | Medium |
@@ -45,9 +43,12 @@ Confirm the flagged items with the owner before launch.
 | Facebook | Futura Bomboniere, about 184 followers | High |
 | Google rating | 4.9 out of 5 from 50 reviews | High |
 
-Three different street numbers appear across sources for the same shop. Only one is correct.
-Ask the owner, then use it everywhere: site footer, contact page, schema markup, Google Business
-Profile. Mismatched NAP data damages local SEO.
+Resolved. The owner confirmed Via Novara 105, 20153 Milano MI, so the earlier Via Novara 34
+from Google Maps and Via Novara 139 from the old site were both wrong. `db/sql/006_address_fix.sql`
+corrects the street number and CAP in `settings` and in the showroom row of `retailers`. The map
+coordinates already matched Via Novara 105, so they were left as they were. Google Business
+Profile still carries the old number and needs updating by the owner, since NAP mismatch
+damages local SEO.
 
 ### 2.2 Opening hours
 
@@ -354,7 +355,8 @@ spam target.
 ## 9. Sessions
 
 ### Session 0. Content and assets
-- Confirm the street number, hours, phone and email with the owner.
+- Street number confirmed by the owner: Via Novara 105, 20153 Milano MI. Still to confirm:
+  the opening hours, the phone and the email.
 - Collect photos and logo, listed in section 2.7.
 - Finalise Italian copy for Chi siamo from section 2.4.
 - Deliverable: a content doc the whole team writes from.
