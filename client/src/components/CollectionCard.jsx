@@ -4,7 +4,7 @@ import PhotoSlot from './PhotoSlot.jsx';
 export default function CollectionCard({ collection }) {
   return (
     <article className="collection-card">
-      <PhotoSlot className="collection-card__media" src={collection.cover_image} alt={`Bomboniere della collezione ${collection.name}`}></PhotoSlot>
+      <PhotoSlot className="collection-card__media" src={collection.cover_image} alt={`Bomboniere della collezione ${collection.name}`} sizes="(max-width: 640px) 100vw, 320px"></PhotoSlot>
       <div className="collection-card__body">
         <p className="collection-card__material">{collection.material}</p>
         <h3 className="collection-card__title">

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr",
+    "images": "node scripts/build-images.mjs",
     "preview": "vite preview",
     "lint": "eslint ."
   },
@@ -23,6 +24,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "sharp": "^0.35.5",
     "vite": "^6.0.7"
   }
 }

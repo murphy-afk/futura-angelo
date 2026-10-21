@@ -58,7 +58,7 @@ export default function CollezioneDettaglio() {
               <Link className="button button--ghost" to="/occasioni">Le occasioni</Link>
             </p>
           </div>
-          <PhotoSlot className="split__media" src={collection.hero_image} alt={`Bomboniere della collezione ${collection.name} in ${collection.material}`} eager></PhotoSlot>
+          <PhotoSlot className="split__media" src={collection.hero_image} alt={`Bomboniere della collezione ${collection.name} in ${collection.material}`} sizes="(max-width: 900px) 100vw, 620px" eager></PhotoSlot>
         </div>
       </section>
 
@@ -72,7 +72,7 @@ export default function CollezioneDettaglio() {
             <div className="product-grid">
               {products.map((product) => (
                 <article className="product-card" key={product.slug}>
-                  <PhotoSlot className="product-card__media" src={product.image} alt={product.name} ratio="square"></PhotoSlot>
+                  <PhotoSlot className="product-card__media" src={product.image} alt={product.name} ratio="square" sizes="(max-width: 640px) 50vw, 280px"></PhotoSlot>
                   <h3 className="product-card__title">{product.name}</h3>
                   <p className="product-card__text">{product.description}</p>
                 </article>

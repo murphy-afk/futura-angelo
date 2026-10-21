@@ -254,7 +254,7 @@ Result: real HTML content per URL for crawlers, and a normal React app for human
 | `settings` | key, value | Shop name, addresses, phones, emails, social links, opening hours JSON, founding year. Read on every render of header and footer. |
 | `collections` | id, slug, name, material, line_count, short_description, long_description, hero_image, cover_image, sort_order, published | One row per material group: silver, vetro, cristallo, porcellana, orologi da tavolo, stile Murano. |
 | `products` | id, collection_id, slug, name, description, image, material, is_featured, sort_order, published | Product gallery entries. |
-| `occasions` | id, slug, name, description | Matrimonio, battesimo, comunione, cresima, laurea, nascita, anniversario. |
+| `occasions` | id, slug, name, description, image | Matrimonio, battesimo, comunione, cresima, laurea, nascita, anniversario. The image column was added by `db/sql/005_occasions_image.sql`. |
 | `product_occasions` | product_id, occasion_id | Many to many join table. |
 | `retailers` | id, name, city, address, region, phone, website, latitude, longitude, is_showroom | Powers the Dove si trova page. The shop itself is seeded as the first row. |
 | `leads` | id, type, name, email, phone, occasion, message, created_at, status | `type` is `privato` or `rivenditore`. Every contact form submission lands here. |

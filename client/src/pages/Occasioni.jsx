@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useApi } from '../lib/useApi.js';
 import PageIntro from '../components/PageIntro.jsx';
+import PhotoSlot from '../components/PhotoSlot.jsx';
 
 export default function Occasioni() {
   const { data, loading, error } = useApi('/occasions');
@@ -19,6 +20,7 @@ export default function Occasioni() {
           <div className="occasion-grid">
             {occasions.map((occasion) => (
               <article className="occasion-card" key={occasion.slug}>
+                <PhotoSlot className="occasion-card__media" src={occasion.image} alt={`Bomboniere per ${occasion.name.toLowerCase()}`} ratio="landscape" sizes="(max-width: 640px) 100vw, 260px"></PhotoSlot>
                 <h2 className="occasion-card__title">{occasion.name}</h2>
                 <p className="occasion-card__text">{occasion.description}</p>
                 <p className="occasion-card__more">

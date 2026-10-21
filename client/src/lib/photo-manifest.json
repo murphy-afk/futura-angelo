@@ -1,0 +1,272 @@
+{
+  "/photos/showroom-tiered-stand-ivory.jpg": {
+    "alt": "Alzata espositiva a tre livelli dello showroom con bomboniere in panno avorio e un angiolino in cima",
+    "width": 541,
+    "height": 960,
+    "fallback": "/photos/showroom-tiered-stand-ivory.jpg",
+    "avif": "/photos/showroom-tiered-stand-ivory-480.avif 480w, /photos/showroom-tiered-stand-ivory-541.avif 541w",
+    "webp": "/photos/showroom-tiered-stand-ivory-480.webp 480w, /photos/showroom-tiered-stand-ivory-541.webp 541w",
+    "jpg": "/photos/showroom-tiered-stand-ivory-480.jpg 480w, /photos/showroom-tiered-stand-ivory.jpg 541w"
+  },
+  "/photos/silver-white-favour-display.jpg": {
+    "alt": "Bomboniere argentate e bianche con fiocchi e perline disposte su un vassoio",
+    "width": 1153,
+    "height": 2048,
+    "fallback": "/photos/silver-white-favour-display.jpg",
+    "avif": "/photos/silver-white-favour-display-480.avif 480w, /photos/silver-white-favour-display-820.avif 820w, /photos/silver-white-favour-display-1153.avif 1153w",
+    "webp": "/photos/silver-white-favour-display-480.webp 480w, /photos/silver-white-favour-display-820.webp 820w, /photos/silver-white-favour-display-1153.webp 1153w",
+    "jpg": "/photos/silver-white-favour-display-480.jpg 480w, /photos/silver-white-favour-display-820.jpg 820w, /photos/silver-white-favour-display.jpg 1153w"
+  },
+  "/photos/glass-bowl-crystal-lotus-lid.jpg": {
+    "alt": "Vaso di vetro con coperchio a loto in cristallo blu e rose di seta all interno",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/glass-bowl-crystal-lotus-lid.jpg",
+    "avif": "/photos/glass-bowl-crystal-lotus-lid-480.avif 480w, /photos/glass-bowl-crystal-lotus-lid-820.avif 820w, /photos/glass-bowl-crystal-lotus-lid-1152.avif 1152w",
+    "webp": "/photos/glass-bowl-crystal-lotus-lid-480.webp 480w, /photos/glass-bowl-crystal-lotus-lid-820.webp 820w, /photos/glass-bowl-crystal-lotus-lid-1152.webp 1152w",
+    "jpg": "/photos/glass-bowl-crystal-lotus-lid-480.jpg 480w, /photos/glass-bowl-crystal-lotus-lid-820.jpg 820w, /photos/glass-bowl-crystal-lotus-lid.jpg 1152w"
+  },
+  "/photos/miledi-home-fragrance-diffusers.jpg": {
+    "alt": "Diffusori di profumo Miledi in vetro con alzacristalli e stecchini di rattan",
+    "width": 720,
+    "height": 960,
+    "fallback": "/photos/miledi-home-fragrance-diffusers.jpg",
+    "avif": "/photos/miledi-home-fragrance-diffusers-480.avif 480w, /photos/miledi-home-fragrance-diffusers-720.avif 720w",
+    "webp": "/photos/miledi-home-fragrance-diffusers-480.webp 480w, /photos/miledi-home-fragrance-diffusers-720.webp 720w",
+    "jpg": "/photos/miledi-home-fragrance-diffusers-480.jpg 480w, /photos/miledi-home-fragrance-diffusers.jpg 720w"
+  },
+  "/photos/crystal-flower-centrepiece.jpg": {
+    "alt": "Centro tavolo a forma di fiore in cristallo con perline trasparenti appese",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/crystal-flower-centrepiece.jpg",
+    "avif": "/photos/crystal-flower-centrepiece-480.avif 480w, /photos/crystal-flower-centrepiece-820.avif 820w, /photos/crystal-flower-centrepiece-1152.avif 1152w",
+    "webp": "/photos/crystal-flower-centrepiece-480.webp 480w, /photos/crystal-flower-centrepiece-820.webp 820w, /photos/crystal-flower-centrepiece-1152.webp 1152w",
+    "jpg": "/photos/crystal-flower-centrepiece-480.jpg 480w, /photos/crystal-flower-centrepiece-820.jpg 820w, /photos/crystal-flower-centrepiece.jpg 1152w"
+  },
+  "/photos/crystal-butterfly-favours.jpg": {
+    "alt": "Bomboniere a forma di farfalla in vetro colorato con base in cristallo",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/crystal-butterfly-favours.jpg",
+    "avif": "/photos/crystal-butterfly-favours-480.avif 480w, /photos/crystal-butterfly-favours-820.avif 820w, /photos/crystal-butterfly-favours-1152.avif 1152w",
+    "webp": "/photos/crystal-butterfly-favours-480.webp 480w, /photos/crystal-butterfly-favours-820.webp 820w, /photos/crystal-butterfly-favours-1152.webp 1152w",
+    "jpg": "/photos/crystal-butterfly-favours-480.jpg 480w, /photos/crystal-butterfly-favours-820.jpg 820w, /photos/crystal-butterfly-favours.jpg 1152w"
+  },
+  "/photos/ceramic-favour-santa-cresima.jpg": {
+    "alt": "Bomboniera in ceramica bianca con scritta in legno Santa Cresima",
+    "width": 1153,
+    "height": 2048,
+    "fallback": "/photos/ceramic-favour-santa-cresima.jpg",
+    "avif": "/photos/ceramic-favour-santa-cresima-480.avif 480w, /photos/ceramic-favour-santa-cresima-820.avif 820w, /photos/ceramic-favour-santa-cresima-1153.avif 1153w",
+    "webp": "/photos/ceramic-favour-santa-cresima-480.webp 480w, /photos/ceramic-favour-santa-cresima-820.webp 820w, /photos/ceramic-favour-santa-cresima-1153.webp 1153w",
+    "jpg": "/photos/ceramic-favour-santa-cresima-480.jpg 480w, /photos/ceramic-favour-santa-cresima-820.jpg 820w, /photos/ceramic-favour-santa-cresima.jpg 1153w"
+  },
+  "/photos/heart-pattern-gift-boxes.jpg": {
+    "alt": "Scatoline regalo con decoro a cuori e cornicini in legno a forma di albero",
+    "width": 1153,
+    "height": 2048,
+    "fallback": "/photos/heart-pattern-gift-boxes.jpg",
+    "avif": "/photos/heart-pattern-gift-boxes-480.avif 480w, /photos/heart-pattern-gift-boxes-820.avif 820w, /photos/heart-pattern-gift-boxes-1153.avif 1153w",
+    "webp": "/photos/heart-pattern-gift-boxes-480.webp 480w, /photos/heart-pattern-gift-boxes-820.webp 820w, /photos/heart-pattern-gift-boxes-1153.webp 1153w",
+    "jpg": "/photos/heart-pattern-gift-boxes-480.jpg 480w, /photos/heart-pattern-gift-boxes-820.jpg 820w, /photos/heart-pattern-gift-boxes.jpg 1153w"
+  },
+  "/photos/showroom-painted-table-clocks.jpg": {
+    "alt": "Scaffale dello showroom con orologi da tavolo in vetro dipinto e cornici",
+    "width": 1280,
+    "height": 720,
+    "fallback": "/photos/showroom-painted-table-clocks.jpg",
+    "avif": "/photos/showroom-painted-table-clocks-480.avif 480w, /photos/showroom-painted-table-clocks-820.avif 820w, /photos/showroom-painted-table-clocks-1280.avif 1280w, /photos/showroom-painted-table-clocks-1920.avif 1920w, /photos/showroom-painted-table-clocks-1280.avif 1280w",
+    "webp": "/photos/showroom-painted-table-clocks-480.webp 480w, /photos/showroom-painted-table-clocks-820.webp 820w, /photos/showroom-painted-table-clocks-1280.webp 1280w, /photos/showroom-painted-table-clocks-1920.webp 1920w, /photos/showroom-painted-table-clocks-1280.webp 1280w",
+    "jpg": "/photos/showroom-painted-table-clocks-480.jpg 480w, /photos/showroom-painted-table-clocks-820.jpg 820w, /photos/showroom-painted-table-clocks.jpg 1280w, /photos/showroom-painted-table-clocks-1920.jpg 1920w, /photos/showroom-painted-table-clocks.jpg 1280w"
+  },
+  "/photos/jute-pouches-blue-bows-rings.jpg": {
+    "alt": "Sacchetti di juta con fiocco azzurro e cartellino con gli anelli degli sposi",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/jute-pouches-blue-bows-rings.jpg",
+    "avif": "/photos/jute-pouches-blue-bows-rings-480.avif 480w, /photos/jute-pouches-blue-bows-rings-820.avif 820w, /photos/jute-pouches-blue-bows-rings-1152.avif 1152w",
+    "webp": "/photos/jute-pouches-blue-bows-rings-480.webp 480w, /photos/jute-pouches-blue-bows-rings-820.webp 820w, /photos/jute-pouches-blue-bows-rings-1152.webp 1152w",
+    "jpg": "/photos/jute-pouches-blue-bows-rings-480.jpg 480w, /photos/jute-pouches-blue-bows-rings-820.jpg 820w, /photos/jute-pouches-blue-bows-rings.jpg 1152w"
+  },
+  "/photos/linen-pouch-wooden-cross.jpg": {
+    "alt": "Sacchetto di lino naturale con croce di legno sospesa per il battesimo",
+    "width": 541,
+    "height": 960,
+    "fallback": "/photos/linen-pouch-wooden-cross.jpg",
+    "avif": "/photos/linen-pouch-wooden-cross-480.avif 480w, /photos/linen-pouch-wooden-cross-541.avif 541w",
+    "webp": "/photos/linen-pouch-wooden-cross-480.webp 480w, /photos/linen-pouch-wooden-cross-541.webp 541w",
+    "jpg": "/photos/linen-pouch-wooden-cross-480.jpg 480w, /photos/linen-pouch-wooden-cross.jpg 541w"
+  },
+  "/photos/satin-bomboniere-pink-bows.jpg": {
+    "alt": "Bomboniere di raso con fiocchi color rosa chiaro e cuoricino per il battesimo",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/satin-bomboniere-pink-bows.jpg",
+    "avif": "/photos/satin-bomboniere-pink-bows-480.avif 480w, /photos/satin-bomboniere-pink-bows-820.avif 820w, /photos/satin-bomboniere-pink-bows-1152.avif 1152w",
+    "webp": "/photos/satin-bomboniere-pink-bows-480.webp 480w, /photos/satin-bomboniere-pink-bows-820.webp 820w, /photos/satin-bomboniere-pink-bows-1152.webp 1152w",
+    "jpg": "/photos/satin-bomboniere-pink-bows-480.jpg 480w, /photos/satin-bomboniere-pink-bows-820.jpg 820w, /photos/satin-bomboniere-pink-bows.jpg 1152w"
+  },
+  "/photos/blue-teddy-birth-display.jpg": {
+    "alt": "Alzata per la nascita con orsetti di peluche azzurri, fiocchi e scritta di auguri",
+    "width": 541,
+    "height": 960,
+    "fallback": "/photos/blue-teddy-birth-display.jpg",
+    "avif": "/photos/blue-teddy-birth-display-480.avif 480w, /photos/blue-teddy-birth-display-541.avif 541w",
+    "webp": "/photos/blue-teddy-birth-display-480.webp 480w, /photos/blue-teddy-birth-display-541.webp 541w",
+    "jpg": "/photos/blue-teddy-birth-display-480.jpg 480w, /photos/blue-teddy-birth-display.jpg 541w"
+  },
+  "/photos/blue-tiered-birth-display.jpg": {
+    "alt": "Alzata a più livelli azzurra con nome e scritta di auguri per la nascita",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/blue-tiered-birth-display.jpg",
+    "avif": "/photos/blue-tiered-birth-display-480.avif 480w, /photos/blue-tiered-birth-display-820.avif 820w, /photos/blue-tiered-birth-display-1152.avif 1152w",
+    "webp": "/photos/blue-tiered-birth-display-480.webp 480w, /photos/blue-tiered-birth-display-820.webp 820w, /photos/blue-tiered-birth-display-1152.webp 1152w",
+    "jpg": "/photos/blue-tiered-birth-display-480.jpg 480w, /photos/blue-tiered-birth-display-820.jpg 820w, /photos/blue-tiered-birth-display.jpg 1152w"
+  },
+  "/photos/teddy-pinwheel-display.jpg": {
+    "alt": "Orsetto di peluche con girandole azzurre e fiocchi per una festa di nascita",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/teddy-pinwheel-display.jpg",
+    "avif": "/photos/teddy-pinwheel-display-480.avif 480w, /photos/teddy-pinwheel-display-820.avif 820w, /photos/teddy-pinwheel-display-1152.avif 1152w",
+    "webp": "/photos/teddy-pinwheel-display-480.webp 480w, /photos/teddy-pinwheel-display-820.webp 820w, /photos/teddy-pinwheel-display-1152.webp 1152w",
+    "jpg": "/photos/teddy-pinwheel-display-480.jpg 480w, /photos/teddy-pinwheel-display-820.jpg 820w, /photos/teddy-pinwheel-display.jpg 1152w"
+  },
+  "/photos/pink-birth-display-matilde.jpg": {
+    "alt": "Alzata per la nascita color rosa con orsetti, stelline e nome scritto",
+    "width": 1280,
+    "height": 1707,
+    "fallback": "/photos/pink-birth-display-matilde.jpg",
+    "avif": "/photos/pink-birth-display-matilde-480.avif 480w, /photos/pink-birth-display-matilde-820.avif 820w, /photos/pink-birth-display-matilde-1280.avif 1280w, /photos/pink-birth-display-matilde-1280.avif 1280w",
+    "webp": "/photos/pink-birth-display-matilde-480.webp 480w, /photos/pink-birth-display-matilde-820.webp 820w, /photos/pink-birth-display-matilde-1280.webp 1280w, /photos/pink-birth-display-matilde-1280.webp 1280w",
+    "jpg": "/photos/pink-birth-display-matilde-480.jpg 480w, /photos/pink-birth-display-matilde-820.jpg 820w, /photos/pink-birth-display-matilde.jpg 1280w, /photos/pink-birth-display-matilde.jpg 1280w"
+  },
+  "/photos/blue-party-table-lina.jpg": {
+    "alt": "Tavolo allestito per una festa azzurra con alzata, palloncini e nome",
+    "width": 1196,
+    "height": 1600,
+    "fallback": "/photos/blue-party-table-lina.jpg",
+    "avif": "/photos/blue-party-table-lina-480.avif 480w, /photos/blue-party-table-lina-820.avif 820w, /photos/blue-party-table-lina-1196.avif 1196w",
+    "webp": "/photos/blue-party-table-lina-480.webp 480w, /photos/blue-party-table-lina-820.webp 820w, /photos/blue-party-table-lina-1196.webp 1196w",
+    "jpg": "/photos/blue-party-table-lina-480.jpg 480w, /photos/blue-party-table-lina-820.jpg 820w, /photos/blue-party-table-lina.jpg 1196w"
+  },
+  "/photos/pastel-confetti-cones.jpg": {
+    "alt": "Coni di confetti pastello con cartellino 18 Anni e nastri color champagne",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/pastel-confetti-cones.jpg",
+    "avif": "/photos/pastel-confetti-cones-480.avif 480w, /photos/pastel-confetti-cones-820.avif 820w, /photos/pastel-confetti-cones-1152.avif 1152w",
+    "webp": "/photos/pastel-confetti-cones-480.webp 480w, /photos/pastel-confetti-cones-820.webp 820w, /photos/pastel-confetti-cones-1152.webp 1152w",
+    "jpg": "/photos/pastel-confetti-cones-480.jpg 480w, /photos/pastel-confetti-cones-820.jpg 820w, /photos/pastel-confetti-cones.jpg 1152w"
+  },
+  "/photos/gold-auguri-favour-table.jpg": {
+    "alt": "Tavolo con bomboniere dorate, palloncini e grande scritta dorata Auguri",
+    "width": 1280,
+    "height": 960,
+    "fallback": "/photos/gold-auguri-favour-table.jpg",
+    "avif": "/photos/gold-auguri-favour-table-480.avif 480w, /photos/gold-auguri-favour-table-820.avif 820w, /photos/gold-auguri-favour-table-1280.avif 1280w, /photos/gold-auguri-favour-table-1920.avif 1920w, /photos/gold-auguri-favour-table-1280.avif 1280w",
+    "webp": "/photos/gold-auguri-favour-table-480.webp 480w, /photos/gold-auguri-favour-table-820.webp 820w, /photos/gold-auguri-favour-table-1280.webp 1280w, /photos/gold-auguri-favour-table-1920.webp 1920w, /photos/gold-auguri-favour-table-1280.webp 1280w",
+    "jpg": "/photos/gold-auguri-favour-table-480.jpg 480w, /photos/gold-auguri-favour-table-820.jpg 820w, /photos/gold-auguri-favour-table.jpg 1280w, /photos/gold-auguri-favour-table-1920.jpg 1920w, /photos/gold-auguri-favour-table.jpg 1280w"
+  },
+  "/photos/white-gold-wedding-favours.jpg": {
+    "alt": "Bomboniere bianche e dorate per il matrimonio con fiocchi e cartellini",
+    "width": 1280,
+    "height": 720,
+    "fallback": "/photos/white-gold-wedding-favours.jpg",
+    "avif": "/photos/white-gold-wedding-favours-480.avif 480w, /photos/white-gold-wedding-favours-820.avif 820w, /photos/white-gold-wedding-favours-1280.avif 1280w, /photos/white-gold-wedding-favours-1280.avif 1280w",
+    "webp": "/photos/white-gold-wedding-favours-480.webp 480w, /photos/white-gold-wedding-favours-820.webp 820w, /photos/white-gold-wedding-favours-1280.webp 1280w, /photos/white-gold-wedding-favours-1280.webp 1280w",
+    "jpg": "/photos/white-gold-wedding-favours-480.jpg 480w, /photos/white-gold-wedding-favours-820.jpg 820w, /photos/white-gold-wedding-favours.jpg 1280w, /photos/white-gold-wedding-favours.jpg 1280w"
+  },
+  "/photos/laurel-wreath-red-ribbon.jpg": {
+    "alt": "Corona d alloro con foglie verdi e grande fiocco di nastro rosso dentro la confezione trasparente",
+    "width": 540,
+    "height": 960,
+    "fallback": "/photos/laurel-wreath-red-ribbon.jpg",
+    "avif": "/photos/laurel-wreath-red-ribbon-480.avif 480w, /photos/laurel-wreath-red-ribbon-540.avif 540w",
+    "webp": "/photos/laurel-wreath-red-ribbon-480.webp 480w, /photos/laurel-wreath-red-ribbon-540.webp 540w",
+    "jpg": "/photos/laurel-wreath-red-ribbon-480.jpg 480w, /photos/laurel-wreath-red-ribbon.jpg 540w"
+  },
+  "/photos/graduation-table-laurel-alt.jpg": {
+    "alt": "Tavolo per la laurea con torta, corona d alloro e fiorellini rossi",
+    "width": 1200,
+    "height": 1600,
+    "fallback": "/photos/graduation-table-laurel-alt.jpg",
+    "avif": "/photos/graduation-table-laurel-alt-480.avif 480w, /photos/graduation-table-laurel-alt-820.avif 820w, /photos/graduation-table-laurel-alt-1200.avif 1200w",
+    "webp": "/photos/graduation-table-laurel-alt-480.webp 480w, /photos/graduation-table-laurel-alt-820.webp 820w, /photos/graduation-table-laurel-alt-1200.webp 1200w",
+    "jpg": "/photos/graduation-table-laurel-alt-480.jpg 480w, /photos/graduation-table-laurel-alt-820.jpg 820w, /photos/graduation-table-laurel-alt.jpg 1200w"
+  },
+  "/photos/jute-graduation-pouches-sunflower.jpg": {
+    "alt": "Bomboniere di juta con girasole e cartellino Laurea",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/jute-graduation-pouches-sunflower.jpg",
+    "avif": "/photos/jute-graduation-pouches-sunflower-480.avif 480w, /photos/jute-graduation-pouches-sunflower-820.avif 820w, /photos/jute-graduation-pouches-sunflower-1152.avif 1152w",
+    "webp": "/photos/jute-graduation-pouches-sunflower-480.webp 480w, /photos/jute-graduation-pouches-sunflower-820.webp 820w, /photos/jute-graduation-pouches-sunflower-1152.webp 1152w",
+    "jpg": "/photos/jute-graduation-pouches-sunflower-480.jpg 480w, /photos/jute-graduation-pouches-sunflower-820.jpg 820w, /photos/jute-graduation-pouches-sunflower.jpg 1152w"
+  },
+  "/photos/red-graduation-pouches-mortarboard.jpg": {
+    "alt": "Sacchetti di raso rossi con tocco di laurea e fiocchi per la cerimonia",
+    "width": 1152,
+    "height": 2048,
+    "fallback": "/photos/red-graduation-pouches-mortarboard.jpg",
+    "avif": "/photos/red-graduation-pouches-mortarboard-480.avif 480w, /photos/red-graduation-pouches-mortarboard-820.avif 820w, /photos/red-graduation-pouches-mortarboard-1152.avif 1152w",
+    "webp": "/photos/red-graduation-pouches-mortarboard-480.webp 480w, /photos/red-graduation-pouches-mortarboard-820.webp 820w, /photos/red-graduation-pouches-mortarboard-1152.webp 1152w",
+    "jpg": "/photos/red-graduation-pouches-mortarboard-480.jpg 480w, /photos/red-graduation-pouches-mortarboard-820.jpg 820w, /photos/red-graduation-pouches-mortarboard.jpg 1152w"
+  },
+  "/photos/blue-bows-silver-laurel.jpg": {
+    "alt": "Fiocchi di raso azzurri con alloro argentato e cartellino Laurea",
+    "width": 1153,
+    "height": 2048,
+    "fallback": "/photos/blue-bows-silver-laurel.jpg",
+    "avif": "/photos/blue-bows-silver-laurel-480.avif 480w, /photos/blue-bows-silver-laurel-820.avif 820w, /photos/blue-bows-silver-laurel-1153.avif 1153w",
+    "webp": "/photos/blue-bows-silver-laurel-480.webp 480w, /photos/blue-bows-silver-laurel-820.webp 820w, /photos/blue-bows-silver-laurel-1153.webp 1153w",
+    "jpg": "/photos/blue-bows-silver-laurel-480.jpg 480w, /photos/blue-bows-silver-laurel-820.jpg 820w, /photos/blue-bows-silver-laurel.jpg 1153w"
+  },
+  "/photos/blue-organza-confetti-pouches.jpg": {
+    "alt": "Sacchetti di organza azzurri con confetti bianchi e azzurri per la comunione",
+    "width": 1153,
+    "height": 2048,
+    "fallback": "/photos/blue-organza-confetti-pouches.jpg",
+    "avif": "/photos/blue-organza-confetti-pouches-480.avif 480w, /photos/blue-organza-confetti-pouches-820.avif 820w, /photos/blue-organza-confetti-pouches-1153.avif 1153w",
+    "webp": "/photos/blue-organza-confetti-pouches-480.webp 480w, /photos/blue-organza-confetti-pouches-820.webp 820w, /photos/blue-organza-confetti-pouches-1153.webp 1153w",
+    "jpg": "/photos/blue-organza-confetti-pouches-480.jpg 480w, /photos/blue-organza-confetti-pouches-820.jpg 820w, /photos/blue-organza-confetti-pouches.jpg 1153w"
+  },
+  "/photos/workbench-pink-satin-bows.jpg": {
+    "alt": "Banco di lavoro con molti fiocchi di raso color rosa cipria pronti",
+    "width": 1153,
+    "height": 2048,
+    "fallback": "/photos/workbench-pink-satin-bows.jpg",
+    "avif": "/photos/workbench-pink-satin-bows-480.avif 480w, /photos/workbench-pink-satin-bows-820.avif 820w, /photos/workbench-pink-satin-bows-1153.avif 1153w",
+    "webp": "/photos/workbench-pink-satin-bows-480.webp 480w, /photos/workbench-pink-satin-bows-820.webp 820w, /photos/workbench-pink-satin-bows-1153.webp 1153w",
+    "jpg": "/photos/workbench-pink-satin-bows-480.jpg 480w, /photos/workbench-pink-satin-bows-820.jpg 820w, /photos/workbench-pink-satin-bows.jpg 1153w"
+  },
+  "/photos/quadifoglio-stationery-display.jpg": {
+    "alt": "Vetrina con partecipazioni Quadifoglio, diffusori a forma di mongolfiera e ceramica",
+    "width": 1153,
+    "height": 2048,
+    "fallback": "/photos/quadifoglio-stationery-display.jpg",
+    "avif": "/photos/quadifoglio-stationery-display-480.avif 480w, /photos/quadifoglio-stationery-display-820.avif 820w, /photos/quadifoglio-stationery-display-1153.avif 1153w",
+    "webp": "/photos/quadifoglio-stationery-display-480.webp 480w, /photos/quadifoglio-stationery-display-820.webp 820w, /photos/quadifoglio-stationery-display-1153.webp 1153w",
+    "jpg": "/photos/quadifoglio-stationery-display-480.jpg 480w, /photos/quadifoglio-stationery-display-820.jpg 820w, /photos/quadifoglio-stationery-display.jpg 1153w"
+  },
+  "/photos/red-pyramid-favour-boxes.jpg": {
+    "alt": "Tre bomboniere a piramide color rosso con girasole, albero dorato e fiocchi",
+    "width": 720,
+    "height": 960,
+    "fallback": "/photos/red-pyramid-favour-boxes.jpg",
+    "avif": "/photos/red-pyramid-favour-boxes-480.avif 480w, /photos/red-pyramid-favour-boxes-720.avif 720w",
+    "webp": "/photos/red-pyramid-favour-boxes-480.webp 480w, /photos/red-pyramid-favour-boxes-720.webp 720w",
+    "jpg": "/photos/red-pyramid-favour-boxes-480.jpg 480w, /photos/red-pyramid-favour-boxes.jpg 720w"
+  },
+  "/photos/white-box-green-ribbon-rose.jpg": {
+    "alt": "Scatolina bianca con nastro verde, rosa avorio e cartellino dorato",
+    "width": 720,
+    "height": 960,
+    "fallback": "/photos/white-box-green-ribbon-rose.jpg",
+    "avif": "/photos/white-box-green-ribbon-rose-480.avif 480w, /photos/white-box-green-ribbon-rose-720.avif 720w",
+    "webp": "/photos/white-box-green-ribbon-rose-480.webp 480w, /photos/white-box-green-ribbon-rose-720.webp 720w",
+    "jpg": "/photos/white-box-green-ribbon-rose-480.jpg 480w, /photos/white-box-green-ribbon-rose.jpg 720w"
+  }
+}

@@ -66,7 +66,7 @@ export default function ChiSiamo() {
           </div>
 
           <aside className="prose-aside">
-            <PhotoSlot className="prose-aside__media" src={null} alt="Il campionario Futura aperto sui modelli in vetro e cristallo" ratio="portrait"></PhotoSlot>
+            <PhotoSlot className="prose-aside__media" src="/photos/glass-bowl-crystal-lotus-lid.jpg" alt="Il campionario Futura aperto sui modelli in vetro e cristallo" ratio="portrait" sizes="(max-width: 900px) 100vw, 320px"></PhotoSlot>
             <dl className="fact-list">
               <div className="fact-list__row">
                 <dt>Ragione sociale</dt>

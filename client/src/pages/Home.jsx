@@ -27,7 +27,7 @@ export default function Home() {
               <Link className="button button--ghost" to="/contatti">Sei un operatore del settore?</Link>
             </p>
           </div>
-          <PhotoSlot className="hero__media" src={settings?.hero_image} alt="Interno dello showroom Futura con bomboniere esposte" eager></PhotoSlot>
+          <PhotoSlot className="hero__media" src={settings?.hero_image} alt="Interno dello showroom Futura con bomboniere esposte" sizes="(max-width: 900px) 100vw, 620px" eager></PhotoSlot>
         </div>
       </section>
 
@@ -71,8 +71,9 @@ export default function Home() {
               <Link className="text-link" to="/chi-siamo">Leggi la storia di Futura</Link>
             </p>
           </div>
-          {/* Photo slot: pointed at the 1992 archive shot once it arrives. */}
-          <PhotoSlot className="split__media" src={null} alt="La bomboniera del divorzio disegnata da Futura nel 1992" ratio="square"></PhotoSlot>
+          {/* Photo slot: a related bomboniera shot stands in until the 1992
+              archive photograph of the divorce bomboniera is supplied. */}
+          <PhotoSlot className="split__media" src="/photos/red-pyramid-favour-boxes.jpg" alt="Bomboniera Futura in vetro colorato" ratio="square" sizes="(max-width: 900px) 100vw, 620px"></PhotoSlot>
         </div>
       </section>
 
