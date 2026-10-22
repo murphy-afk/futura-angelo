@@ -3,6 +3,7 @@ import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import { DataProvider } from './lib/dataProvider.jsx';
+import { routerBasename } from './lib/basePath.js';
 import './styles/tokens.css';
 import './styles/global.css';
 import './styles/layout.css';
@@ -17,7 +18,7 @@ const rootElement = document.getElementById('root');
 
 const app = (
   <DataProvider initial={initial}>
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <App></App>
     </BrowserRouter>
   </DataProvider>

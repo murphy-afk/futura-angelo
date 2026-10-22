@@ -7,6 +7,7 @@
 // the layout keeps its final proportions.
 
 import photoManifest from '../lib/photo-manifest.json';
+import { withBase, withBaseSrcSet } from '../lib/basePath.js';
 
 export default function PhotoSlot({
   src,
@@ -24,12 +25,12 @@ export default function PhotoSlot({
 
   return (
     <picture className={`photo ${className}`.trim()}>
-      <source type="image/avif" srcSet={entry.avif} sizes={sizes} />
-      <source type="image/webp" srcSet={entry.webp} sizes={sizes} />
+      <source type="image/avif" srcSet={withBaseSrcSet(entry.avif)} sizes={sizes} />
+      <source type="image/webp" srcSet={withBaseSrcSet(entry.webp)} sizes={sizes} />
       <img
         className="photo__image"
-        src={entry.fallback}
-        srcSet={entry.jpg}
+        src={withBase(entry.fallback)}
+        srcSet={withBaseSrcSet(entry.jpg)}
         sizes={sizes}
         alt={entry.alt || alt}
         width={entry.width}

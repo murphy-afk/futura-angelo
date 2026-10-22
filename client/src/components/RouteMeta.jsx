@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { apiGet } from '../lib/api.js';
+import { withBase } from '../lib/basePath.js';
 
 // Keeps the document head in step with client side navigation. On a direct
 // load Express has already written the head for that URL, so the first render
@@ -35,7 +36,7 @@ function applyMeta(meta) {
       element.setAttribute('rel', 'canonical');
       return element;
     });
-    link.setAttribute('href', new URL(meta.canonical, window.location.origin).toString());
+    link.setAttribute('href', new URL(withBase(meta.canonical), window.location.origin).toString());
   } else if (canonical) {
     canonical.remove();
   }
