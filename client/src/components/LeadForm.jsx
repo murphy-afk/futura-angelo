@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { apiPost } from '../lib/api.js';
 
+// A host with no API cannot store a submission. The static build sets
+// VITE_STATIC, and on that build the form opens the visitor's mail client with
+// the message already addressed and written, so no request is lost and nothing
+// third party is introduced. The server deployment leaves VITE_STATIC unset
+// and keeps posting to /api/leads.
+const IS_STATIC = import.meta.env.VITE_STATIC === 'true';
+
 const EMPTY_FIELDS = {
   name: '',
   email: '',
@@ -13,7 +20,7 @@ const EMPTY_FIELDS = {
 // One of the two columns on the Contatti page. `leadType` tells the API which
 // audience the lead belongs to, `sito_web` is the honeypot the server ignores.
 
-export default function LeadForm({ leadType, title, intro, occasions = [], successMessage }) {
+export default function LeadForm({ leadType, title, intro, occasions = [], successMessage, contactEmail = '' }) {
   const [fields, setFields] = useState(EMPTY_FIELDS);
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState(null);
@@ -27,6 +34,28 @@ export default function LeadForm({ leadType, title, intro, occasions = [], succe
     event.preventDefault();
     setStatus('sending');
     setError(null);
+
+    if (IS_STATIC) {
+      if (!contactEmail) {
+        setError('Non è stato possibile aprire il programma di posta. Scrivici per telefono o email.');
+        setStatus('idle');
+        return;
+      }
+      const subject = leadType === 'rivenditore' ? 'Richiesta operatori del settore' : 'Richiesta bomboniere';
+      const lines = [
+        `Nome: ${fields.name}`,
+        `Email: ${fields.email}`,
+        fields.phone ? `Telefono: ${fields.phone}` : '',
+        fields.occasion ? `Occasione: ${fields.occasion}` : '',
+        '',
+        fields.message,
+      ].filter(Boolean);
+      const href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+      window.location.href = href;
+      setFields(EMPTY_FIELDS);
+      setStatus('sent');
+      return;
+    }
 
     try {
       await apiPost('/leads', { type: leadType, ...fields });
@@ -47,7 +76,11 @@ export default function LeadForm({ leadType, title, intro, occasions = [], succe
     return (
       <section className="lead-form" aria-live="polite">
         <h2>{title}</h2>
-        <p className="form-note form-note--ok">{successMessage}</p>
+        <p className="form-note form-note--ok">
+          {IS_STATIC
+            ? 'Si è aperto il tuo programma di posta con il messaggio già compilato. Spediscilo per completare la richiesta.'
+            : successMessage}
+        </p>
         <button className="button button--ghost" type="button" onClick={() => setStatus('idle')}>
           Invia un'altra richiesta
         </button>

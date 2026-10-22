@@ -63,8 +63,8 @@ export default function Contatti() {
           </aside>
 
           <div className="contact-forms">
-            <LeadForm leadType="privato" title="Sposi e famiglie" occasions={occasions} intro={privateIntro} successMessage={privateSuccess}></LeadForm>
-            <LeadForm leadType="rivenditore" title="Operatori del settore" intro={tradeIntro} successMessage={tradeSuccess}></LeadForm>
+            <LeadForm leadType="privato" title="Sposi e famiglie" occasions={occasions} intro={privateIntro} successMessage={privateSuccess} contactEmail={email}></LeadForm>
+            <LeadForm leadType="rivenditore" title="Operatori del settore" intro={tradeIntro} successMessage={tradeSuccess} contactEmail={email}></LeadForm>
           </div>
         </div>
       </section>
