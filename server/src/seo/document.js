@@ -4,25 +4,20 @@ import { config } from '../config.js';
 import { findMetaForPath } from '../db/pagesMeta.js';
 import { getSettings } from '../db/settings.js';
 import { findCollectionBySlug } from '../db/collections.js';
-import { breadcrumbList, localBusiness, organization } from './jsonLd.js';
 import { renderRoute } from './ssr.js';
+import { assembleDocument, normalizePath } from './documentTemplate.js';
 
 // Per route HTML renderer. Express hands it a path, it reads title,
 // description, canonical and og image from pages_meta, adds JSON-LD built
 // from settings, and injects everything plus the rendered React body into the
 // build template. The crawler therefore receives the same document the visitor
 // sees, and React hydrates that markup instead of replacing it.
+//
+// The head and JSON-LD markup itself lives in documentTemplate.js, which has
+// no database import, so the static build can reuse it. This module only reads
+// the data and hands it to the shared assembler.
 
 const templatePath = path.resolve(config.clientDist, 'index.html');
-
-const FIXED_LABELS = {
-  '/': 'Home',
-  '/chi-siamo': 'Chi siamo',
-  '/collezioni': 'Collezioni',
-  '/occasioni': 'Occasioni',
-  '/dove-si-trova': 'Dove si trova',
-  '/contatti': 'Contatti',
-};
 
 let cachedTemplate = null;
 
@@ -40,161 +35,28 @@ function loadTemplate() {
   return cachedTemplate.html;
 }
 
-function normalizePath(pathname) {
-  let route = typeof pathname === 'string' && pathname ? pathname : '/';
-  if (!route.startsWith('/')) route = `/${route}`;
-  if (route.length > 1 && route.endsWith('/')) route = route.slice(0, -1);
-  return route;
-}
+// Backs the breadcrumb label for a collection detail page with a query, so the
+// trail shows the material name instead of the raw slug.
 
-function escapeText(value) {
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-}
-
-function escapeAttribute(value) {
-  return escapeText(value).replace(/"/g, '&quot;');
-}
-
-function absoluteUrl(value, publicUrl) {
-  if (!value) return null;
-  if (/^https?:\/\//i.test(value)) return value;
-  return `${publicUrl}${value.startsWith('/') ? '' : '/'}${value}`;
-}
-
-function buildHead({ title, description, canonical, ogImage, siteName, jsonLd }) {
-  const lines = [];
-  lines.push(`<title>${escapeText(title)}</title>`);
-  if (description) {
-    lines.push(`<meta name="description" content="${escapeAttribute(description)}" />`);
-  }
-  if (canonical) {
-    lines.push(`<link rel="canonical" href="${escapeAttribute(canonical)}" />`);
-  }
-  lines.push('<meta property="og:type" content="website" />');
-  lines.push(`<meta property="og:site_name" content="${escapeAttribute(siteName)}" />`);
-  lines.push('<meta property="og:locale" content="it_IT" />');
-  lines.push(`<meta property="og:title" content="${escapeAttribute(title)}" />`);
-  if (description) {
-    lines.push(`<meta property="og:description" content="${escapeAttribute(description)}" />`);
-  }
-  if (canonical) {
-    lines.push(`<meta property="og:url" content="${escapeAttribute(canonical)}" />`);
-  }
-  if (ogImage) {
-    lines.push(`<meta property="og:image" content="${escapeAttribute(ogImage)}" />`);
-  }
-  if (jsonLd) {
-    lines.push(`<script type="application/ld+json">${jsonLd}</script>`);
-  }
-  return lines.join('\n    ');
-}
-
-function applyHead(template, head) {
-  const titleTag = /<title>[\s\S]*?<\/title>/;
-  if (titleTag.test(template)) {
-    return template.replace(titleTag, () => head);
-  }
-  return template.replace('</head>', () => `${head}\n  </head>`);
-}
-
-// The rendered body goes inside the root element and the data the page was
-// rendered from goes into a global, so the first client render reads the same
-// values instead of refetching. A callback replacer keeps dollar sequences in
-// the markup and in the JSON out of the replacement string.
-
-function applyBody(template, markup, initialData) {
-  const dataJson = JSON.stringify(initialData)
-    .replace(/</g, '\\u003c')
-    .replace(/\u2028/g, '\\u2028')
-    .replace(/\u2029/g, '\\u2029');
-
-  const withData = template.replace(
-    '</body>',
-    () => `    <script>window.__INITIAL_DATA__ = ${dataJson};</script>\n  </body>`
-  );
-
-  if (!markup) return withData;
-  return withData.replace('<div id="root"></div>', () => `<div id="root">${markup}</div>`);
-}
-
-async function buildBreadcrumbs(route) {
-  if (route === '/') return null;
-
-  const segments = route.split('/').filter(Boolean);
-  const items = [{ label: 'Home', path: '/' }];
-  let accumulated = '';
-
-  for (let index = 0; index < segments.length; index += 1) {
-    accumulated += `/${segments[index]}`;
-    let label = FIXED_LABELS[accumulated];
-
-    // A collection detail page shows the material name, read from the
-    // database rather than guessed from the slug.
-    if (!label && segments[index - 1] === 'collezioni') {
-      const collection = await findCollectionBySlug(segments[index]);
-      label = collection ? collection.name : segments[index];
-    }
-
-    if (!label) label = segments[index];
-    items.push({ label, path: accumulated });
-  }
-
-  return items;
-}
-
-async function buildJsonLd(route, settings, publicUrl) {
-  const nodes = [];
-
-  if (route === '/') nodes.push(localBusiness(settings, publicUrl));
-  if (route === '/chi-siamo') nodes.push(organization(settings, publicUrl));
-
-  const items = await buildBreadcrumbs(route);
-  if (items) nodes.push(breadcrumbList(items, publicUrl));
-
-  if (nodes.length === 0) return null;
-  // Escape the angle bracket so a value can never close the script element.
-  return JSON.stringify(nodes).replace(/</g, '\\u003c');
+async function resolveCollectionName(slug) {
+  const collection = await findCollectionBySlug(slug);
+  return collection ? collection.name : null;
 }
 
 export async function renderDocument(pathname) {
   const route = normalizePath(pathname);
 
   const [meta, settings] = await Promise.all([findMetaForPath(route), getSettings()]);
-
-  // No row at all means the seed scripts have not been run yet. The template
-  // still renders, without invented metadata.
-  if (!meta) {
-    return { html: loadTemplate(), status: 404 };
-  }
-
-  // The '*' row is the 404 document: real copy, but the response status
-  // stays 404 so crawlers never index it.
-  const status = meta.route === '*' ? 404 : 200;
-  const publicUrl = (config.publicUrl || '').replace(/\/$/, '');
-
-  const canonical =
-    status === 200 && meta.canonical ? absoluteUrl(meta.canonical, publicUrl) : null;
-  const ogImage = meta.og_image ? absoluteUrl(meta.og_image, publicUrl) : null;
-  const jsonLd = status === 200 ? await buildJsonLd(route, settings, publicUrl) : null;
-
-  const head = buildHead({
-    title: meta.title,
-    description: meta.description,
-    canonical,
-    ogImage,
-    siteName: settings.shop_name || 'Futura',
-    jsonLd,
-  });
-
   const rendered = await renderRoute(route);
-  const html = applyBody(
-    applyHead(loadTemplate(), head),
-    rendered ? rendered.markup : '',
-    rendered ? rendered.initialData : {}
-  );
 
-  return { html, status };
+  return assembleDocument({
+    route,
+    meta,
+    settings,
+    publicUrl: config.publicUrl,
+    template: loadTemplate(),
+    markup: rendered ? rendered.markup : '',
+    initialData: rendered ? rendered.initialData : {},
+    resolveCollectionName,
+  });
 }
