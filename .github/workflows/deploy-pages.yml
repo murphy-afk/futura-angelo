@@ -1,0 +1,83 @@
+# Publishes the pre-rendered static site to GitHub Pages. The site is a
+# temporary home until the client picks a permanent host, so this workflow only
+# builds and uploads files: it never runs the Express server and never touches
+# MySQL.
+#
+# Two repository settings are required, both in Settings, Pages:
+#   Source must be set to GitHub Actions.
+#   Pages must be enabled for the repository.
+#
+# The snapshot the build reads, client/static-data.json, is committed. Re-run
+# `npm run data:export` and commit the result whenever the seed data changes,
+# otherwise the published site keeps the data it was last built from.
+
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            client/package-lock.json
+            server/package-lock.json
+
+      - name: Install client dependencies
+        run: npm ci
+        working-directory: client
+
+      - name: Install server dependencies
+        run: npm ci
+        working-directory: server
+
+      # The site lives under the repository name, so a project page is served
+      # from /futura-angelo/. If it later moves to a custom domain at the root,
+      # change these two values to / and the bare origin.
+      - name: Set site URL
+        run: |
+          echo "PUBLIC_URL=https://murphy-afk.github.io/futura-angelo" >> "$GITHUB_ENV"
+          echo "VITE_BASE=/futura-angelo/" >> "$GITHUB_ENV"
+          echo "VITE_STATIC=true" >> "$GITHUB_ENV"
+
+      - name: Build client and render site
+        run: npm run build:static
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: client/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
