@@ -1,0 +1,282 @@
+{
+  "generatedAt": "2026-10-22T09:42:42.746Z",
+  "settings": {
+    "address_city": "Milano",
+    "address_country": "Italia",
+    "address_region": "Lombardia",
+    "address_street": "Via Novara 105",
+    "address_zip": "20153",
+    "email": "futura@futurabomboniere.it",
+    "email_secondary": "angelolacalamita.al@gmail.com",
+    "facebook_url": "https://www.facebook.com/p/Futura-Bomboniere-100063580117147",
+    "fax": "+39 02 4820 2805",
+    "founding_statement": "Attiva da oltre trent anni nel settore delle bomboniere",
+    "geo_lat": "45.4730713",
+    "geo_lng": "9.1184392",
+    "google_rating_count": "50",
+    "google_rating_value": "4.9",
+    "hero_image": "/photos/showroom-tiered-stand-ivory.jpg",
+    "hours_json": "{\"lun\":\"09:30-19:30\",\"mar\":\"09:30-19:30\",\"mer\":\"09:30-19:30\",\"gio\":\"09:30-19:30\",\"ven\":\"09:30-19:30\",\"sab\":\"09:30-19:30\",\"dom\":\"10:30-19:00\"}",
+    "owner_name": "Angelo Lacalamita",
+    "phone_landline": "+39 02 4820 2585",
+    "phone_mobile": "+39 349 237 6450",
+    "shop_legal_name": "Futura di Lacalamita Angelo",
+    "shop_name": "Futura",
+    "tagline": "Bomboniere e articoli da regalo, made in Italy",
+    "hours": {
+      "lun": "09:30-19:30",
+      "mar": "09:30-19:30",
+      "mer": "09:30-19:30",
+      "gio": "09:30-19:30",
+      "ven": "09:30-19:30",
+      "sab": "09:30-19:30",
+      "dom": "10:30-19:00"
+    }
+  },
+  "collections": [
+    {
+      "id": 1,
+      "slug": "silver",
+      "name": "Silver",
+      "material": "Argento",
+      "line_count": 4,
+      "short_description": "Quattro linee in argento, per un regalo che resta nel tempo.",
+      "long_description": "Quattro linee in argento. Materiali rigorosamente made in Italy, pensati per durare e per essere esposti.",
+      "hero_image": "/photos/silver-white-favour-display.jpg",
+      "cover_image": "/photos/silver-white-favour-display.jpg",
+      "sort_order": 1,
+      "products": []
+    },
+    {
+      "id": 2,
+      "slug": "vetro",
+      "name": "Vetro",
+      "material": "Vetro",
+      "line_count": 10,
+      "short_description": "Dieci linee in vetro, la collezione più ampia del campionario.",
+      "long_description": "Dieci linee in vetro. Forme e decori sempre all'avanguardia, disponibili per più stagioni.",
+      "hero_image": "/photos/miledi-home-fragrance-diffusers.jpg",
+      "cover_image": "/photos/glass-bowl-crystal-lotus-lid.jpg",
+      "sort_order": 2,
+      "products": []
+    },
+    {
+      "id": 3,
+      "slug": "cristallo",
+      "name": "Cristallo",
+      "material": "Cristallo",
+      "line_count": 4,
+      "short_description": "Quattro linee in cristallo, la scelta più classica per le grandi occasioni.",
+      "long_description": "Quattro linee in cristallo. La trasparenza del materiale valorizza ogni decoro e ogni colore.",
+      "hero_image": "/photos/crystal-flower-centrepiece.jpg",
+      "cover_image": "/photos/crystal-flower-centrepiece.jpg",
+      "sort_order": 3,
+      "products": []
+    },
+    {
+      "id": 4,
+      "slug": "porcellana",
+      "name": "Porcellana",
+      "material": "Porcellana",
+      "line_count": 4,
+      "short_description": "Quattro linee in porcellana, decorate a mano.",
+      "long_description": "Quattro linee in porcellana. Decorazioni e forme che seguono le tendenze dell'arredamento italiano.",
+      "hero_image": "/photos/ceramic-favour-santa-cresima.jpg",
+      "cover_image": "/photos/ceramic-favour-santa-cresima.jpg",
+      "sort_order": 4,
+      "products": []
+    },
+    {
+      "id": 5,
+      "slug": "orologi-da-tavolo",
+      "name": "Orologi da tavolo",
+      "material": "Vetro dipinto",
+      "line_count": 7,
+      "short_description": "Sette linee di orologi da tavolo in vetro dipinto.",
+      "long_description": "Sette linee di orologi da tavolo in vetro dipinto. Un oggetto utile che diventa ricordo della cerimonia.",
+      "hero_image": "/photos/showroom-painted-table-clocks.jpg",
+      "cover_image": "/photos/showroom-painted-table-clocks.jpg",
+      "sort_order": 5,
+      "products": []
+    },
+    {
+      "id": 6,
+      "slug": "stile-murano",
+      "name": "Stile Murano",
+      "material": "Vetro stile Murano",
+      "line_count": 8,
+      "short_description": "Otto linee in stile Murano, colori saturi e finiture preziose.",
+      "long_description": "Otto linee in stile Murano. Colori e tecniche che richiamano la tradizione del vetro veneziano.",
+      "hero_image": "/photos/crystal-butterfly-favours.jpg",
+      "cover_image": "/photos/crystal-butterfly-favours.jpg",
+      "sort_order": 6,
+      "products": []
+    }
+  ],
+  "occasions": [
+    {
+      "id": 1,
+      "slug": "matrimonio",
+      "name": "Matrimonio",
+      "description": "Bomboniere per sposi e per la cerimonia.",
+      "image": "/photos/jute-pouches-blue-bows-rings.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": 2,
+      "slug": "battesimo",
+      "name": "Battesimo",
+      "description": "Bomboniere per il battesimo.",
+      "image": "/photos/satin-bomboniere-pink-bows.jpg",
+      "sort_order": 2
+    },
+    {
+      "id": 3,
+      "slug": "comunione",
+      "name": "Comunione",
+      "description": "Bomboniere per la prima comunione.",
+      "image": "/photos/blue-organza-confetti-pouches.jpg",
+      "sort_order": 3
+    },
+    {
+      "id": 4,
+      "slug": "cresima",
+      "name": "Cresima",
+      "description": "Bomboniere per la cresima.",
+      "image": "/photos/ceramic-favour-santa-cresima.jpg",
+      "sort_order": 4
+    },
+    {
+      "id": 5,
+      "slug": "laurea",
+      "name": "Laurea",
+      "description": "Bomboniere per la laurea.",
+      "image": "/photos/red-graduation-pouches-mortarboard.jpg",
+      "sort_order": 5
+    },
+    {
+      "id": 6,
+      "slug": "nascita",
+      "name": "Nascita",
+      "description": "Bomboniere per la nascita.",
+      "image": "/photos/blue-tiered-birth-display.jpg",
+      "sort_order": 6
+    },
+    {
+      "id": 7,
+      "slug": "anniversario",
+      "name": "Anniversario",
+      "description": "Bomboniere per gli anniversari.",
+      "image": "/photos/gold-auguri-favour-table.jpg",
+      "sort_order": 7
+    }
+  ],
+  "retailers": [
+    {
+      "id": 1,
+      "name": "Futura di Lacalamita Angelo",
+      "city": "Milano",
+      "address": "Via Novara 34, 20147 Milano",
+      "region": "Lombardia",
+      "phone": "+39 02 4820 2585",
+      "website": "https://www.futurabomboniere.it",
+      "latitude": 45.4730713,
+      "longitude": 9.1184392,
+      "is_showroom": 1,
+      "sort_order": 1
+    }
+  ],
+  "meta": {
+    "*": {
+      "route": "*",
+      "title": "Pagina non trovata | Futura bomboniere Milano",
+      "description": "La pagina che cerchi non esiste. Torna alle collezioni di bomboniere Futura o contattaci per informazioni.",
+      "og_image": null,
+      "canonical": null
+    },
+    "/": {
+      "route": "/",
+      "title": "Futura, bomboniere e articoli da regalo a Milano",
+      "description": "Futura produce e distribuisce bomboniere made in Italy: argento, vetro, cristallo, porcellana, orologi da tavolo e stile Murano. Showroom in Via Novara a Milano.",
+      "og_image": "/photos/showroom-tiered-stand-ivory.jpg",
+      "canonical": "/"
+    },
+    "/chi-siamo": {
+      "route": "/chi-siamo",
+      "title": "Chi siamo | Futura bomboniere Milano",
+      "description": "La storia di Futura di Lacalamita Angelo: campionario di bomboniere made in Italy, 37 linee e oltre trent anni di esperienza nel settore.",
+      "og_image": "/photos/showroom-painted-table-clocks.jpg",
+      "canonical": "/chi-siamo"
+    },
+    "/collezioni": {
+      "route": "/collezioni",
+      "title": "Le collezioni | Futura bomboniere",
+      "description": "Argento, vetro, cristallo, porcellana, orologi da tavolo in vetro dipinto e stile Murano. Le sei collezioni di bomboniere Futura.",
+      "og_image": "/photos/silver-white-favour-display.jpg",
+      "canonical": "/collezioni"
+    },
+    "/collezioni/cristallo": {
+      "route": "/collezioni/cristallo",
+      "title": "Collezione Cristallo | Bomboniere in cristallo",
+      "description": "Quattro linee di bomboniere in cristallo made in Italy, per le occasioni più importanti.",
+      "og_image": "/photos/crystal-flower-centrepiece.jpg",
+      "canonical": "/collezioni/cristallo"
+    },
+    "/collezioni/orologi-da-tavolo": {
+      "route": "/collezioni/orologi-da-tavolo",
+      "title": "Orologi da tavolo | Futura bomboniere",
+      "description": "Sette linee di orologi da tavolo in vetro dipinto, bomboniere utili che diventano ricordo.",
+      "og_image": "/photos/showroom-painted-table-clocks.jpg",
+      "canonical": "/collezioni/orologi-da-tavolo"
+    },
+    "/collezioni/porcellana": {
+      "route": "/collezioni/porcellana",
+      "title": "Collezione Porcellana | Bomboniere in porcellana",
+      "description": "Quattro linee di bomboniere in porcellana made in Italy, decorate secondo le tendenze dell'arredamento.",
+      "og_image": "/photos/ceramic-favour-santa-cresima.jpg",
+      "canonical": "/collezioni/porcellana"
+    },
+    "/collezioni/silver": {
+      "route": "/collezioni/silver",
+      "title": "Collezione Silver | Bomboniere in argento",
+      "description": "Quattro linee di bomboniere in argento made in Italy, per matrimoni e cerimonie.",
+      "og_image": "/photos/silver-white-favour-display.jpg",
+      "canonical": "/collezioni/silver"
+    },
+    "/collezioni/stile-murano": {
+      "route": "/collezioni/stile-murano",
+      "title": "Collezione Stile Murano | Bomboniere in vetro",
+      "description": "Otto linee di bomboniere in stile Murano, colori saturi e finiture preziose made in Italy.",
+      "og_image": "/photos/crystal-butterfly-favours.jpg",
+      "canonical": "/collezioni/stile-murano"
+    },
+    "/collezioni/vetro": {
+      "route": "/collezioni/vetro",
+      "title": "Collezione Vetro | Bomboniere in vetro",
+      "description": "Dieci linee di bomboniere in vetro made in Italy, la collezione più ampia del campionario Futura.",
+      "og_image": "/photos/glass-bowl-crystal-lotus-lid.jpg",
+      "canonical": "/collezioni/vetro"
+    },
+    "/contatti": {
+      "route": "/contatti",
+      "title": "Contatti | Futura bomboniere Milano",
+      "description": "Contatta Futura per le bomboniere o per diventare punto vendita esclusivo. Telefono, email e modulo di contatto.",
+      "og_image": "/photos/white-gold-wedding-favours.jpg",
+      "canonical": "/contatti"
+    },
+    "/dove-si-trova": {
+      "route": "/dove-si-trova",
+      "title": "Dove si trova | Futura bomboniere Milano",
+      "description": "Showroom Futura in Via Novara a Milano, aperto tutti i giorni. Trova il punto vendita più vicino a te.",
+      "og_image": "/photos/showroom-tiered-stand-ivory.jpg",
+      "canonical": "/dove-si-trova"
+    },
+    "/occasioni": {
+      "route": "/occasioni",
+      "title": "Bomboniere per ogni cerimonia | Futura Milano",
+      "description": "Bomboniere per matrimonio, battesimo, comunione, cresima, laurea, nascita e anniversario.",
+      "og_image": "/photos/gold-auguri-favour-table.jpg",
+      "canonical": "/occasioni"
+    }
+  }
+}

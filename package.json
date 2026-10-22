@@ -8,6 +8,8 @@
     "dev:client": "npm --prefix client run dev",
     "dev:server": "npm --prefix server run dev",
     "build": "npm --prefix client run build",
+    "build:static": "npm --prefix server run data:export && npm run build && npm --prefix server run build:static",
+    "data:export": "npm --prefix server run data:export",
     "images": "npm --prefix client run images",
     "start": "npm --prefix server run start",
     "lint": "npm --prefix client run lint && npm --prefix server run lint",

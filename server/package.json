@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "node --watch src/index.js",
     "start": "node src/index.js",
+    "data:export": "node scripts/export-static-data.mjs",
+    "build:static": "node scripts/build-static.mjs",
     "lint": "eslint ."
   },
   "dependencies": {
