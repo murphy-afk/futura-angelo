@@ -60,8 +60,10 @@ jobs:
           echo "VITE_BASE=/futura-angelo/" >> "$GITHUB_ENV"
           echo "VITE_STATIC=true" >> "$GITHUB_ENV"
 
+      # Build from the committed snapshot, client/static-data.json. This skips
+      # data:export, which needs MySQL and a server/.env that CI does not have.
       - name: Build client and render site
-        run: npm run build:static
+        run: npm run build:static:ci
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
