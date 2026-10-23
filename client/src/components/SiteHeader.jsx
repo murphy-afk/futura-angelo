@@ -22,8 +22,10 @@ export default function SiteHeader() {
           <span className="site-logo__tag">Bomboniere, Milano</span>
         </Link>
 
-        <button className="site-nav__toggle" type="button" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen(!open)}>
-          {open ? 'Chiudi il menu' : 'Apri il menu'}
+        <button className="site-nav__toggle" type="button" aria-label={open ? 'Chiudi il menu' : 'Apri il menu'} aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen(!open)}>
+          <span className="site-nav__toggle-line" aria-hidden="true"></span>
+          <span className="site-nav__toggle-line" aria-hidden="true"></span>
+          <span className="site-nav__toggle-line" aria-hidden="true"></span>
         </button>
 
         <nav id="site-nav" className={navClass} aria-label="Navigazione principale">
